@@ -39,7 +39,7 @@ set gitname=klog
 git clone --branch %BRANCH% --single-branch --progress --depth 1 "https://github.com/jiangkeredgirl/"%gitname%.git %SOURCE_PATH%\%gitname% > %DAILY_LOG_PATH%\%gitname%.git.log 2>&1
 
 echo Build klog start %date% %time%
-call %SOURCE_PATH%\klog\build.bat %DAILY_OUT_PATH%\klog >> %DAILY_LOG_PATH%\klog.build.log 2>&1
+call %SOURCE_PATH%\klog\build.bat %~dp0%DAILY_OUT_PATH%\klog\ >> %DAILY_LOG_PATH%\klog.build.log 2>&1
 echo Build klog end! %date% %time%
 
 pause
