@@ -28,18 +28,18 @@ echo Build all modules
 rem clone sourcecode by jiangke
 echo clone kutility %date% %time%
 set gitname=kutility
-git clone --branch %BRANCH% --single-branch --progress --depth 1 "https://github.com/jiangkeredgirl/"%gitname%.git %SOURCE_PATH%\%gitname% > %DAILY_LOG_PATH%\%gitname%.git.log 2>&1
+git clone --branch %BRANCH% --single-branch --progress --depth 1 "https://github.com/jiangkeredgirl/"%gitname%.git %SOURCE_PATH%\%gitname% > %DAILY_LOG_PATH%\%gitname%.git.log
 
 rem echo clone thirdparty %date% %time%
 rem set gitname=thirdparty
-rem git clone --branch %BRANCH% --single-branch --progress --depth 1 "https://github.com/jiangkeredgirl/"%gitname%.git %SOURCE_PATH%\%gitname% > %DAILY_LOG_PATH%\%gitname%.git.log 2>&1
+rem git clone --branch %BRANCH% --single-branch --progress --depth 1 "https://github.com/jiangkeredgirl/"%gitname%.git %SOURCE_PATH%\%gitname% > %DAILY_LOG_PATH%\%gitname%.git.log
 
 echo clone klog %date% %time%
 set gitname=klog
-git clone --branch %BRANCH% --single-branch --progress --depth 1 "https://github.com/jiangkeredgirl/"%gitname%.git %SOURCE_PATH%\%gitname% > %DAILY_LOG_PATH%\%gitname%.git.log 2>&1
+git clone --branch %BRANCH% --single-branch --progress --depth 1 "https://github.com/jiangkeredgirl/"%gitname%.git %SOURCE_PATH%\%gitname% > %DAILY_LOG_PATH%\%gitname%.git.log
 
 echo Build klog start %date% %time%
-call %SOURCE_PATH%\klog\build.bat %~dp0%DAILY_OUT_PATH%\klog\ >> %DAILY_LOG_PATH%\klog.build.log 2>&1
+call %SOURCE_PATH%\klog\build.bat %~dp0%DAILY_OUT_PATH%\klog\ >> %DAILY_LOG_PATH%\klog.build.log
 echo Build klog end! %date% %time%
 
 pause
